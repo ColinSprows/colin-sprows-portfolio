@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colin Sprows' Portfolio</title>
+    <!-- jquery goes here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <!-- bootstrap goes here -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
@@ -20,20 +24,14 @@
             <img src="/assets/images/mac-logo.png" alt="pixelated og apple logo" width="20px" height="20px">
             <!-- add File dropdown with social links -->
             <div class="dropdown">
-                <button>File</button>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#github">Github</a>
-                        </li>
-                        <li>
-                            <a href="#linkedin">LinkedIn</a>
-                        </li>
-                        <li>
-                            <a href="#twitter">Twitter</a>
-                        </li>
-                    </ul>
-                </nav>
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  File
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Github</a></li>
+                  <li><a class="dropdown-item" href="#">Twitter</a></li>
+                  <li><a class="dropdown-item" href="#">LinkedIn</a></li>
+                </ul>
             </div>
         </div>
         <div class="header-right">
@@ -44,8 +42,10 @@
     <!-- add C drive icon that opens a window when clicked with previous work -->
     <section class="desktop">
         <div class="mywork">
+            <button data-bs-target="#myModal" class="modal-btn btn btn-settings" data-backdrop="false" data-bs-toggle="modal">
                 <img src="/assets/images/folder-icon.png" alt="mac os 9 folder icon" width="72px" height="72px" id="img-margin">
                 <h3 id="text-margin">My_Work</h3>
+            </button>
         </div>
         <div class="resume">
                 <img src="/assets/images/resume-icon.png" alt="mac os 9 text icon" width="72px" height="72px" id="img-margin2">
@@ -56,6 +56,19 @@
                 <h3 id="text-margin2">Contact</h3>
         </div>
     </section>
+    <!-- modal -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">My_Work</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="./assets/scripts/script.js"></script>
 </html>

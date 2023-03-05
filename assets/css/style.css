@@ -94,6 +94,11 @@ a {
     margin: 0px 0px 0px -4px;
 }
 
+.mywork button.btn-settings {
+    background: transparent;
+    color: black;
+}
+
 .resume { 
 }
 
@@ -123,15 +128,6 @@ a {
     display: block;
 }
 
-.modal {
-    position: absolute;
-    width: 600px;
-    height: 400px;
-    border: 1px solid black;
-    right: 225px;
-    top: 125px;
-}
-
 /* bulma fixes */
 
 h4 {
@@ -147,4 +143,117 @@ h3 {
 .header-left img {
     padding: 0px;
     margin: 0px 8px 2px 9px;
+}
+
+.header-right img {
+    padding: 0px;
+    margin: 0px 8px 2px 9px;
+}
+
+/* DROPDOWN */
+
+.btn-secondary {
+    background: transparent;
+    color: black;
+    border: none;
+    --bs-btn-active-color: black;
+    --bs-btn-active-bg: transparent;
+}
+
+.btn:hover {
+    background: transparent;
+    color: black;
+    /* border: none; */
+}
+
+.btn:active {
+    background: transparent;
+    color: black;
+    border: 0px solid black;
+}
+
+.btn.show {
+    background: transparent;
+    color: black;
+    border: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-menu {
+    background: #DDDDDD;
+    border: 1px solid black;
+    border-radius: 0px;
+}
+
+/* MODAL */
+
+button.btn-settings {
+    margin: 25px;
+    padding: 20px 30px;
+    font-size: 1.2em;
+    background-color: #337ab7;
+    color: white;
+}
+button.btn-settings:active {
+    color: white;
+}
+.modal {
+    overflow: hidden;
+    height: 40vh;
+    width: 60vw;
+    border: 2px solid black;
+    left: 225px;
+    top: 125px;
+    background: #DDDDDD;
+    padding-left: 12px;
+    padding-right: 12px;
+    --bs-modal-width: 100%;
+    --bs-modal-inner-border-radius: 0px;
+    --bs-modal-margin: 0px;
+    --bs-modal-border-radius: 0px;
+    --bs-modal-border-color: transparent;
+}
+
+.modal-dialog {
+    margin-right: 0;
+    margin-left: 0;
+    height: 100%;
+}
+
+.modal-content {
+    height: 100%;
+}
+
+.modal-header {
+    height:30px;
+    padding: 20px;
+    border-bottom: none;
+    background: #DDDDDD;
+}
+
+.modal-header .close {
+    margin-left: -20px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-title {
+    font-size: 16px;
+    margin: 0px auto;
+}
+
+.modal-body {
+    padding: 5px 35px 20px;
+    background: white;
+    border: 2px solid black;
+    height: 100%;
+}
+
+.fade:not(.show) {
+    opacity: 100;
 }
